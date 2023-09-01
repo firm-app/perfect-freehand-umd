@@ -2,3 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm test
+
+cd packages/perfect-freehand && yarn build
+git add dist
