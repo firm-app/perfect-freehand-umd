@@ -18,7 +18,7 @@ async function main() {
 
   await esbuild.build({
     entryPoints: ['./src/index.ts'],
-    outfile: 'dist/global/index.js',
+    outfile: 'dist/global/PerfectFreehand.js',
     minify: true,
     bundle: true,
     format: 'iife',
