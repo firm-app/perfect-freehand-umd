@@ -16,6 +16,17 @@ async function main() {
     tsconfig: './tsconfig.build.json',
   })
 
+  await esbuild.build({
+    entryPoints: ['./src/index.ts'],
+    outfile: 'dist/global/index.js',
+    minify: true,
+    bundle: true,
+    format: 'iife',
+    globalName: 'PerfectFreehand',
+    target: 'es6',
+    tsconfig: './tsconfig.build.json',
+  })
+
   const esmResult = await esbuild.build({
     entryPoints: ['./src/index.ts'],
     outdir: 'dist/esm',
